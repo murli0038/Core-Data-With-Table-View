@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x1H-m6-BMn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CoreDataWithTableView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataWithTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zpf-KD-DZd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="50" id="ObJ-2P-wGf" customClass="MyTableViewCell" customModule="CoreDataWithTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ObJ-2P-wGf" id="ZOm-Rq-QZ6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdd-wy-PP1">
+                                                    <rect key="frame" x="20" y="11" width="374" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jdd-wy-PP1" firstAttribute="trailing" secondItem="ZOm-Rq-QZ6" secondAttribute="trailingMargin" id="D3V-vO-IxE"/>
+                                                <constraint firstItem="jdd-wy-PP1" firstAttribute="leading" secondItem="ZOm-Rq-QZ6" secondAttribute="leadingMargin" id="YSe-am-4QW"/>
+                                                <constraint firstItem="jdd-wy-PP1" firstAttribute="bottom" secondItem="ZOm-Rq-QZ6" secondAttribute="bottomMargin" id="cFe-W9-GtM"/>
+                                                <constraint firstItem="jdd-wy-PP1" firstAttribute="top" secondItem="ZOm-Rq-QZ6" secondAttribute="topMargin" id="kp1-5p-8Uc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="namelbl" destination="jdd-wy-PP1" id="XtA-L8-7qV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="eRp-Nu-lOs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="94K-k6-Wa6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Zpf-KD-DZd" secondAttribute="bottom" id="9yv-hG-lpg"/>
+                            <constraint firstItem="Zpf-KD-DZd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O1d-Hm-1Pw"/>
+                            <constraint firstAttribute="trailing" secondItem="Zpf-KD-DZd" secondAttribute="trailing" id="QLZ-yD-53k"/>
+                            <constraint firstItem="Zpf-KD-DZd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ftv-mU-CLt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CoreDataWithTableView" id="SUs-Xg-TZ3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rj9-UO-og6">
+                            <connections>
+                                <action selector="addButton:" destination="BYZ-38-t0r" id="GwA-PQ-oJl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Zpf-KD-DZd" id="9o2-5f-CpE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OqB-jd-ybl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x1H-m6-BMn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ncA-eo-aoH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sEV-aC-VnK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HaX-qF-Ryc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+</document>
